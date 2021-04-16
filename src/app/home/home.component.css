@@ -1,0 +1,217 @@
+header{
+  z-index: 4;
+  position: relative;
+  align-content: center;
+  align-items: center;
+  justify-items: end;
+  text-align: right;
+  padding-top: 100px;
+  padding-left: 5%;
+  padding-right: 10%;
+  padding-bottom: 40px;
+
+}
+
+h1{
+  font-weight: 600;
+  margin-right: 9.5rem;
+  color: #2b2839;
+  text-shadow: 4px 4px 0 #fff;
+  font-size: 5rem;
+  line-height: 94px;
+  --u_lh: 44px;
+  text-align: right;
+
+}
+
+h5{
+  max-width: 830px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  text-align: right;
+  font-size: 29px;
+  margin-left: 11rem;
+}
+.image1
+{
+  left: 0rem;
+  vertical-align: middle;
+  border-style: none;
+  opacity: 1;
+  width: 46%;
+  height: auto;
+  padding-top: 10px;
+  max-width: 600px;
+  color: hsla(26.50,53.00%,91.50%,50%);
+  filter: opacity(0.3);
+}
+.image2
+{
+  top: -50px;
+  right: -7vw;
+  min-width: 200px;
+  width: 30%;
+  max-width: 550px;
+  height: 40rem;
+  color: hsla(139.00,25.50%,92.50%,100%);
+  filter: opacity(0.3);
+}
+.image3
+{
+  --t_x: 0;
+    --t_y: 0;
+    --t_z: 0;
+    --t_rotate: 0;
+    --t_scale: 1;
+    --t_scale-x: 1;
+    --t_scale-y: 1;
+    --t_skew-x: 0;
+    --t_skew-y: 0;
+    transform: translate3d(var(--t_x),var(--t_y),var(--t_z)) rotate(var(--t_rotate)) skewX(var(--t_skew-x)) skewY(var(--t_skew-y)) scaleX(var(--t_scale-x)) scaleY(var(--t_scale-y)) scale(var(--t_scale));
+    right: 2%;
+    --t_y: -50% !important;
+    top: 22%;
+    height: 70%;
+    max-height: 450px;
+    transform: scaleX(-1);
+}
+.shape1{
+  position: absolute;
+  display: block;
+}
+.shape2{
+  position: absolute;
+  display: block;
+}
+.shape3{
+  position: absolute;
+}
+.btn-btn{
+  color: #ffffff;
+  font-weight: normal;
+  background-color: transparent;
+  text-decoration: none;
+
+}
+.btn-lg
+{
+  margin-right: 9rem;
+  margin-top: 2rem;
+}
+.btn-primary {
+  color: #fff;
+  background-color:#5035ff;
+  border-color: #5035ff;
+  margin-top: 20px;
+}
+
+/**mobile view*/
+
+@media only screen and (max-width: 600px)
+{
+  header{
+    z-index: 4;
+    position: relative;
+    align-content: center;
+    align-items: center;
+    justify-items: end;
+    text-align: right;
+    padding-top: 100px;
+    padding-left: 5%;
+    padding-right: 10%;
+    padding-bottom: 40px;
+    display: grid;
+  }
+
+  h1{
+    display: contents;
+    font-weight: 600;
+    margin-right: 9.5rem;
+    color: #2b2839;
+    text-shadow: 4px 4px 0 #fff;
+    line-height: 44px;
+    --u_lh: 44px;
+    text-align: right;
+    font-size: 3rem;
+  }
+
+  h5{
+    max-width: 830px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    text-align: right;
+    font-size: 1.2rem;
+    margin-left: 0rem;
+  }
+  .image1
+  {
+    left: 0rem;
+    vertical-align: middle;
+    border-style: none;
+    opacity: 1;
+    width: 46%;
+    height: auto;
+    padding-top: 10px;
+    max-width: 600px;
+    color: hsla(26.50,53.00%,91.50%,50%);
+  }
+  .image2
+  {
+    top: -40px;
+    right: 0vw;
+    min-width: 200px;
+    width: 30%;
+    max-width: 550px;
+    height: 20rem;
+    color: hsla(139.00,25.50%,92.50%,100%);
+  }
+  .image3
+  {
+    --t_x: 0;
+      --t_y: 0;
+      --t_z: 0;
+      --t_rotate: 0;
+      --t_scale: 1;
+      --t_scale-x: 1;
+      --t_scale-y: 1;
+      --t_skew-x: 0;
+      --t_skew-y: 0;
+      transform: translate3d(var(--t_x),var(--t_y),var(--t_z)) rotate(var(--t_rotate)) skewX(var(--t_skew-x)) skewY(var(--t_skew-y)) scaleX(var(--t_scale-x)) scaleY(var(--t_scale-y)) scale(var(--t_scale));
+      right: 2%;
+      --t_y: -50% !important;
+      top: 22%;
+      height: 70%;
+      max-height: 450px;
+      transform: scaleX(-1);
+      display:  none;
+  }
+  .shape1{
+    position: absolute;
+    display: block;
+  }
+  .shape2{
+    position: absolute;
+    display: block;
+  }
+  .shape3{
+    position: absolute;
+  }
+.btn-btn{
+    color: #ffffff;
+    font-weight: bold;
+    background-color: transparent;
+}
+.btn-primary {
+  color: #fff;
+  background-color:#5035ff;
+  border-color: #5035ff;
+  margin-top: 20px;
+}
+.btn-lg
+{
+  margin-right: 0rem;
+  margin-top: 2rem;
+}
+}

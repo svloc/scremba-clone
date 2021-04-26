@@ -96,7 +96,7 @@ display: grid;
 }
 .btn-lg
 {
-  margin-right: 8rem;
+  margin-right: 9.5rem;
   margin-top: 2rem;
 }
 .btn-primary {
@@ -136,10 +136,7 @@ display: grid;
     flex-wrap: nowrap;
     margin-top:50px;
   }
-.col-sm-4
-{
-  height: 15rem;
-}
+
 .leftpad
 {
     padding-top: 0rem;

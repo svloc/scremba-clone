@@ -6,6 +6,14 @@
   margin:0rem auto 2rem auto;
   position: relative;
 }
+.blob-1{
+position: absolute;
+z-index: -1;
+width: 100%;
+left: -20px;
+    top: 85px;
+    transform: scale(1.2)
+}
 .home-title{
   font-size: 1.5rem;
   line-height: 1.1;
@@ -19,7 +27,7 @@
   position:absolute;
   top:30px;
 right:0;
-width:70%; 
+width:70%;
 }
 .home-heading{
   font-weight: 600;
@@ -38,7 +46,7 @@ width:70%;
  background-color:#5035ff;
  padding: 0.75em 1em;
  text-align: center;
- color: white;            
+ color: white;
 box-shadow: 0 0 20px #eee;
 border-radius: 5px;
  border:none;
@@ -46,21 +54,7 @@ border-radius: 5px;
  font-weight:600;
 }
 
-.blob{
-  width: 100%;
-  position: absolute;
-  transform: scale(1);
-  overflow: hidden;
-  opacity: 0.4;
-  z-index: -1;
-}
-.blob-1{
-  top: 96px;
-  position: absolute;
-  left: 11px;
-  width: 181px;
-  color: #b895e8;
-}
+
 
  .comment{
  margin: 1em 0;
@@ -73,10 +67,10 @@ border-radius: 5px;
    padding-top:1em;
    bottom:-18px;
    position:relative;
-   
- } 
- 
- 
+
+ }
+
+
 .comment-container{
  padding:5rem 0;
  background-color:#FFEBCD;
@@ -160,9 +154,16 @@ top:25px;
  color: #fff;
 -webkit-text-stroke: 1px hsla(0,0%,100%,100%);
 text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
- 
+position: relative;
 }
-
+.heading-blob-1{
+  position: absolute;
+  color: #f1ded0;
+  z-index: -1;
+  left: 116px;
+  width: 90px;
+  height: 80px;
+}
 .section-item-heading-secondary{
  margin-bottom:0.5em;
  font-size: 2rem;
@@ -306,7 +307,16 @@ text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
  display:flex;
  flex-direction:column;
 }
-
+.section6{
+  width: 100%;
+  background-color: #dceae0;
+  clip-path: polygon(50% 1%, 72% 0, 100% 1%, 100% 100%, 78% 99%, 55% 100%, 22% 99%, 0 100%, 0 1%, 22% 0);
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around ;
+  align-items: center;
+}
 
 
 
@@ -322,14 +332,20 @@ text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
 
 
  /*   >>> Main class end  <<<<*/
-  
+
 
 
 /*   >>> media  query  <<<<*/
-@media (min-width:580px)
+@media (min-width:780px)
 {
   .home-container{
     width: 75vw;
+  }
+  .blob-1{
+    left: 0;
+    top: -60px;
+    width: 100%;
+    transform: scale(1.091);
   }
   .home-title{
   font-size: 2rem;
@@ -340,7 +356,7 @@ text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
   }
   .underline{
     top: 33px;
-    width: 100%; 
+    width: 100%;
   }
   .home-heading{
     font-size: 5.5rem;
@@ -354,12 +370,12 @@ text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     justify-content:space-around;
     flex-direction:row;
   }
-  
+
   .comment-img{
     width:65%;
     margin-left:35%;
   }
-  
+
   .comment-item-1{
     width:18%;
     display: flex;
@@ -378,7 +394,7 @@ text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     margin-right: 0.4em;
   }
   .comment-heading{
-    font-size: 3.2rem;  
+    font-size: 3.2rem;
     margin-bottom:0.4em;
     line-height: 1.25;
   }
@@ -417,10 +433,8 @@ text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
 .section-item-heading-primary{
  text-align:left;
  }
-.section-item-heading-primary-bg{
-width:15%;
-top:5px;
- left:495px;  
+.heading-blob-1{
+  left: -26px;
 }
 .section-2{
  flex-direction: row;
@@ -442,7 +456,7 @@ top:5px;
 .section-3-bg{
 width:20%;
 top:-15px;
-left:430px; 
+left:430px;
 }
 .section-3-item-1{
  width:40%;
@@ -487,13 +501,20 @@ left:430px;
 
  .section5-item-1{
   width:40%;
-  
+
  }
  .section5-item-2{
   width: 41%;
   order: -2;
   padding-top: 3.5em;
  }
-
-
+.section6{
+  flex-direction: row;
+}
+.section6-item-1{
+  width: 40%;
+}
+.section6-item-2{
+  width: 30%;
+}
 }

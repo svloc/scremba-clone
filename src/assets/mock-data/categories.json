@@ -1,0 +1,8 @@
+[
+  {"id": "c_4001", "name": "Web Development", "slug": "web-development"},
+  {"id": "c_4002", "name": "Angular", "slug": "angular"},
+  {"id": "c_4003", "name": "TypeScript", "slug": "typescript"},
+  {"id": "c_4004", "name": "Design Systems", "slug": "design-systems"},
+  {"id": "c_4005", "name": "Accessibility", "slug": "accessibility"}
+]
+

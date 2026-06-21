@@ -1,9 +1,26 @@
-<nav>
-    <img src="../../assets/dark-logo.svg" class="img-logo" >
-  <ul>
-    <li class="browse-course">Browse course</li>
-    <li class="pricing">Pricing</li>
-    <li class="nav-btn">Go Pro!</li>
-    <li>Log In</li>
-  </ul>
+<nav class="nav">
+  <div class="app-container nav__inner">
+    <img src="../../assets/dark-logo.svg" class="nav__logo" />
+
+    <ul class="nav__menu">
+      <li class="browse-course nav__item"><a routerLink="/courses">Browse courses</a></li>
+      <li class="pricing nav__item"><a routerLink="/">Pricing</a></li>
+      <li class="nav-btn nav__item"><a routerLink="/">Go Pro!</a></li>
+
+      <li *ngIf="!currentUser()" class="nav__item"><a routerLink="/login">Log In</a></li>
+
+      <li *ngIf="currentUser() && (currentRole()==='student' || currentRole()==='admin')" class="nav__item">
+        <a routerLink="/dashboard">Dashboard</a>
+      </li>
+
+      <li *ngIf="currentUser() && currentRole()==='admin'" class="nav__item">
+        <a routerLink="/admin">Admin</a>
+      </li>
+
+      <li *ngIf="currentUser()" class="nav__item"><a routerLink="/logout">Log out</a></li>
+    </ul>
+  </div>
 </nav>
+
+
+

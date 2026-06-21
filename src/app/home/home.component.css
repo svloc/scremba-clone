@@ -1,11 +1,17 @@
 
 .home-container{
-  text-align: right;
-  width: 100vw;
-  max-width: 90vw;
+  width: 100%;
   margin:0rem auto 2rem auto;
   position: relative;
 }
+
+/* Use shared container padding for alignment */
+.home-container{
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+
 .blob-1{
 position: absolute;
 z-index: -1;
@@ -340,7 +346,10 @@ position: relative;
 {
   .home-container{
     width: 75vw;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
   }
+
   .blob-1{
     left: 0;
     top: -60px;

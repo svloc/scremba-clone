@@ -1,0 +1,30 @@
+[
+  {
+    "id": "n_9001",
+    "userId": "u_1001",
+    "type": "progress",
+    "title": "Nice work!",
+    "message": "You completed a lesson in Angular 22 in Depth.",
+    "createdAt": "2026-03-20T12:00:00.000Z",
+    "read": false
+  },
+  {
+    "id": "n_9002",
+    "userId": "u_1001",
+    "type": "recommendation",
+    "title": "Recommended",
+    "message": "Continue where you left off in Course Player.",
+    "createdAt": "2026-03-21T09:15:00.000Z",
+    "read": true
+  },
+  {
+    "id": "n_9101",
+    "userId": "u_1002",
+    "type": "progress",
+    "title": "Progress update",
+    "message": "You’re 40% complete in Design Systems that Ship.",
+    "createdAt": "2026-03-08T13:40:00.000Z",
+    "read": false
+  }
+]
+

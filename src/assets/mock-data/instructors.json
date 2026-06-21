@@ -1,0 +1,42 @@
+[
+  {
+    "id": "i_3001",
+    "name": "Emma Collins",
+    "headline": "Frontend engineer • Design systems • Angular",
+    "avatarUrl": "assets/peep-guy-macbook.svg",
+    "bio": "I build UI systems that scale and teach practical frontend engineering with clear, example-driven lessons.",
+    "social": {
+      "twitter": "https://twitter.com/example",
+      "github": "https://github.com/example"
+    },
+    "expertiseTags": ["Angular", "Design Systems", "Performance"],
+    "studentCount": 48210
+  },
+  {
+    "id": "i_3002",
+    "name": "Noah Patel",
+    "headline": "Full-stack mentor • TypeScript • Architecture",
+    "avatarUrl": "assets/peep-man-bearded.svg",
+    "bio": "I help teams build maintainable apps with strong TypeScript patterns and thoughtful architecture.",
+    "social": {
+      "twitter": "https://twitter.com/example2",
+      "github": "https://github.com/example2"
+    },
+    "expertiseTags": ["TypeScript", "Architecture", "Testing"],
+    "studentCount": 31640
+  },
+  {
+    "id": "i_3003",
+    "name": "Sophia Martinez",
+    "headline": "Learning designer • UX • Accessibility",
+    "avatarUrl": "assets/peep-girl-wheelchair.svg",
+    "bio": "I design learning experiences that feel modern, inclusive, and actionable—with accessibility baked in.",
+    "social": {
+      "twitter": "https://twitter.com/example3",
+      "github": "https://github.com/example3"
+    },
+    "expertiseTags": ["UX", "Accessibility", "UI Engineering"],
+    "studentCount": 22150
+  }
+]
+

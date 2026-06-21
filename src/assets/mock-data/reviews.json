@@ -1,0 +1,39 @@
+[
+  {
+    "id": "rev_7001",
+    "courseId": "course_5001",
+    "userId": "u_1001",
+    "rating": 5,
+    "title": "Very practical and well structured",
+    "body": "The architecture explanations and the project flow made it easy to follow. Loved the signals + NgRx approach.",
+    "createdAt": "2026-03-19T14:10:00.000Z"
+  },
+  {
+    "id": "rev_7002",
+    "courseId": "course_5001",
+    "userId": "u_1002",
+    "rating": 4,
+    "title": "Solid intermediate content",
+    "body": "Good pacing and clear examples. A few sections could have more depth, but overall great.",
+    "createdAt": "2026-03-25T11:05:00.000Z"
+  },
+  {
+    "id": "rev_7101",
+    "courseId": "course_5002",
+    "userId": "u_1001",
+    "rating": 5,
+    "title": "Best TypeScript course I’ve taken",
+    "body": "The generics patterns and refactor workflow were worth it alone.",
+    "createdAt": "2026-02-26T09:30:00.000Z"
+  },
+  {
+    "id": "rev_7201",
+    "courseId": "course_5003",
+    "userId": "u_1002",
+    "rating": 5,
+    "title": "Accessibility done right",
+    "body": "Practical guidance on keyboard support and semantic markup. Great for UI engineers.",
+    "createdAt": "2026-03-06T16:20:00.000Z"
+  }
+]
+

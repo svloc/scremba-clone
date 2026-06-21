@@ -1,0 +1,24 @@
+[
+  {
+    "id": "t_8001",
+    "name": "Jordan K.",
+    "role": "Frontend Developer",
+    "quote": "This platform feels modern and the learning flow is extremely motivating. The course structure is so clear.",
+    "avatarUrl": "assets/peep-man-bearded.svg"
+  },
+  {
+    "id": "t_8002",
+    "name": "Taylor S.",
+    "role": "Product Engineer",
+    "quote": "The resume learning + progress tracking experience is exactly what I wanted for my team.",
+    "avatarUrl": "assets/peep-guy-macbook.svg"
+  },
+  {
+    "id": "t_8003",
+    "name": "Casey R.",
+    "role": "UX Engineer",
+    "quote": "Amazing emphasis on accessibility and reusable UI. Feels like a polished Udemy/FEM hybrid.",
+    "avatarUrl": "assets/peep-girl-wheelchair.svg"
+  }
+]
+

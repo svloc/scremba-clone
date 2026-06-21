@@ -1,10 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
+// Deprecated: this app is bootstrapped with standalone routing via `provideRouter` in src/main.ts.
+// Kept only to avoid breaking existing imports in older scaffolding.
 export class AppRoutingModule { }
+

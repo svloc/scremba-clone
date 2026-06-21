@@ -1,0 +1,33 @@
+[
+  {
+    "id": "u_1001",
+    "email": "student1@example.com",
+    "password": "Password123!",
+    "firstName": "Alex",
+    "lastName": "Johnson",
+    "role": "student",
+    "avatarUrl": "assets/peep-girl-wheelchair.svg",
+    "createdAt": "2026-01-05T10:00:00.000Z"
+  },
+  {
+    "id": "u_1002",
+    "email": "student2@example.com",
+    "password": "Password123!",
+    "firstName": "Priya",
+    "lastName": "Sharma",
+    "role": "student",
+    "avatarUrl": "assets/peep-man-bearded.svg",
+    "createdAt": "2026-02-03T09:00:00.000Z"
+  },
+  {
+    "id": "u_2001",
+    "email": "admin@example.com",
+    "password": "Admin123!",
+    "firstName": "Morgan",
+    "lastName": "Lee",
+    "role": "admin",
+    "avatarUrl": "assets/peep-crowd.svg",
+    "createdAt": "2026-02-10T12:30:00.000Z"
+  }
+]
+

@@ -1,0 +1,24 @@
+[
+  {
+    "userId": "u_1001",
+    "courseId": "course_5001",
+    "completedLessonIds": ["lesson_6001", "lesson_6002"],
+    "lastWatchedLessonId": "lesson_6002",
+    "updatedAt": "2026-03-21T08:05:00.000Z"
+  },
+  {
+    "userId": "u_1001",
+    "courseId": "course_5002",
+    "completedLessonIds": ["lesson_6101"],
+    "lastWatchedLessonId": "lesson_6101",
+    "updatedAt": "2026-02-27T10:20:00.000Z"
+  },
+  {
+    "userId": "u_1002",
+    "courseId": "course_5003",
+    "completedLessonIds": ["lesson_6201"],
+    "lastWatchedLessonId": "lesson_6201",
+    "updatedAt": "2026-03-09T15:10:00.000Z"
+  }
+]
+

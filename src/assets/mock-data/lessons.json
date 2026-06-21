@@ -1,0 +1,104 @@
+[
+  {
+    "id": "lesson_6001",
+    "courseId": "course_5001",
+    "title": "Course Setup & Project Structure",
+    "contentType": "video",
+    "durationMinutes": 14,
+    "order": 1,
+    "preview": "Set up a feature-based folder structure with standalone components."
+  },
+  {
+    "id": "lesson_6002",
+    "courseId": "course_5001",
+    "title": "Signals for UI State",
+    "contentType": "interactive",
+    "durationMinutes": 18,
+    "order": 2,
+    "preview": "Derive UI state with signals without overusing change detection."
+  },
+  {
+    "id": "lesson_6003",
+    "courseId": "course_5001",
+    "title": "Lazy Loading & Route Guards",
+    "contentType": "video",
+    "durationMinutes": 16,
+    "order": 3,
+    "preview": "Protect student routes and keep public pages fast."
+  },
+  {
+    "id": "lesson_6004",
+    "courseId": "course_5001",
+    "title": "NgRx Feature Stores with Entity Adapters",
+    "contentType": "interactive",
+    "durationMinutes": 22,
+    "order": 4,
+    "preview": "Model courses, categories, instructors, and progress using normalized entities."
+  },
+  {
+    "id": "lesson_6005",
+    "courseId": "course_5001",
+    "title": "Course Player: Resume Learning",
+    "contentType": "project",
+    "durationMinutes": 26,
+    "order": 5,
+    "preview": "Track progress and resume from the last watched lesson."
+  },
+
+  {
+    "id": "lesson_6101",
+    "courseId": "course_5002",
+    "title": "TypeScript Foundations for UI",
+    "contentType": "video",
+    "durationMinutes": 20,
+    "order": 1,
+    "preview": "Understand types, narrowing, and safe defaults."
+  },
+  {
+    "id": "lesson_6102",
+    "courseId": "course_5002",
+    "title": "Generics that Feel Natural",
+    "contentType": "interactive",
+    "durationMinutes": 23,
+    "order": 2,
+    "preview": "Build reusable types and helper functions."
+  },
+  {
+    "id": "lesson_6103",
+    "courseId": "course_5002",
+    "title": "Refactoring with Type Tests",
+    "contentType": "project",
+    "durationMinutes": 17,
+    "order": 3,
+    "preview": "Use type-driven testing to refactor confidently."
+  },
+
+  {
+    "id": "lesson_6201",
+    "courseId": "course_5003",
+    "title": "Design Tokens & Component States",
+    "contentType": "video",
+    "durationMinutes": 18,
+    "order": 1,
+    "preview": "Set up tokens for typography, spacing, and component states."
+  },
+  {
+    "id": "lesson_6202",
+    "courseId": "course_5003",
+    "title": "Accessibility by Default",
+    "contentType": "interactive",
+    "durationMinutes": 24,
+    "order": 2,
+    "preview": "Use semantics, keyboard support, and ARIA responsibly."
+  },
+  {
+    "id": "lesson_6203",
+    "courseId": "course_5003",
+    "title": "Reusable Component API Design",
+    "contentType": "project",
+    "durationMinutes": 21,
+    "order": 3,
+    "preview": "Create component props that are composable and predictable."
+  }
+]
+

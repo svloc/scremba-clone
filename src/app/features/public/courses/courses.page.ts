@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 
 import { loadCoursesRequested } from '../../../state/courses/courses.actions';
+
 import { selectAllCourses, selectCoursesLoading } from '../../../state/courses/courses.selectors';
+import { RouterLink } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-courses-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   template: `
     <main class="page">
       <header class="header">
@@ -19,7 +23,8 @@ import { selectAllCourses, selectCoursesLoading } from '../../../state/courses/c
       <div class="loading" *ngIf="loading$ | async">Loading courses…</div>
 
       <section class="grid" *ngIf="(loading$ | async) === false">
-        <div class="card" *ngFor="let c of courses$ | async">
+        <a class="card" *ngFor="let c of courses$ | async" [routerLink]="['/courses', c.id]">
+
           <img [src]="c.thumbnailUrl" [alt]="c.title" class="thumb" />
           <div class="meta">
             <h2 class="title">{{ c.title }}</h2>
@@ -30,7 +35,7 @@ import { selectAllCourses, selectCoursesLoading } from '../../../state/courses/c
               <span class="pill">⭐ {{ c.rating.toFixed(1) }}</span>
             </div>
           </div>
-        </div>
+        </a>
       </section>
 
       <div class="empty" *ngIf="(loading$ | async) === false && (courses$ | async)?.length === 0">

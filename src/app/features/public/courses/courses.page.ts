@@ -25,7 +25,7 @@ import { RouterLink } from '@angular/router';
       <section class="grid" *ngIf="(loading$ | async) === false">
         <a class="card" *ngFor="let c of courses$ | async" [routerLink]="['/courses', c.id]">
 
-          <img [src]="c.thumbnailUrl" [alt]="c.title" class="thumb" />
+          <img [src]="(c.thumbnailUrl?.startsWith('assets/') ? '/' + c.thumbnailUrl : c.thumbnailUrl) ?? ''" [alt]="c.title" class="thumb" />
           <div class="meta">
             <h2 class="title">{{ c.title }}</h2>
             <p class="subtitle">{{ c.subtitle }}</p>
@@ -68,6 +68,7 @@ export class CoursesPage {
     this.courses$ = this.store.select(selectAllCourses);
     this.loading$ = this.store.select(selectCoursesLoading);
 
+    // Always request courses on each visit; effects handle caching/recovery.
     this.store.dispatch(loadCoursesRequested());
   }
 }

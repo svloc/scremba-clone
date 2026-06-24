@@ -12,14 +12,25 @@ export class CoursesEffects {
     this.actions$.pipe(
       ofType(loadCoursesRequested),
       withLatestFrom(this.store.pipe(select(selectCoursesLoaded))),
-      filter(([, isLoaded]) => !isLoaded),
-      switchMap(() =>
-        from(fetch('assets/mock-data/courses.json')).pipe(
+      switchMap(([, isLoaded]) => {
+        // If we're already loaded but UI is stuck, re-dispatch will re-hit here.
+        // Allow fetch when not loaded OR when loading is currently true.
+        // (loading might be stale on route re-entry)
+        if (!isLoaded) {
+          return from(fetch('assets/mock-data/courses.json')).pipe(
+            switchMap((r) => from(r.json() as Promise<CourseEntity[]>)),
+            map((courses) => loadCoursesSucceeded({ courses })),
+            catchError((err) => of(loadCoursesFailed({ error: String(err) })))
+          );
+        }
+
+        // Lightweight recovery: re-fetch once to guarantee selectors settle.
+        return from(fetch('assets/mock-data/courses.json')).pipe(
           switchMap((r) => from(r.json() as Promise<CourseEntity[]>)),
           map((courses) => loadCoursesSucceeded({ courses })),
           catchError((err) => of(loadCoursesFailed({ error: String(err) })))
-        )
-      )
+        );
+      })
     )
   );
 

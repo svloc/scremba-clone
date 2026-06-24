@@ -11,6 +11,13 @@ import { selectInstructorById } from '../../../state/instructors/instructors.sel
 import { loadCategoriesRequested } from '../../../state/categories/categories.actions';
 import { selectCategoryById } from '../../../state/categories/categories.selectors';
 
+import { loadProgressRequested } from '../../../state/progress/progress.actions';
+
+import { AuthService } from '../../../core/auth/auth.service';
+
+
+
+
 @Component({
   selector: 'app-course-details-page',
   standalone: true,
@@ -105,6 +112,8 @@ import { selectCategoryById } from '../../../state/categories/categories.selecto
 export class CourseDetailsPage {
   private readonly store = inject(Store);
   private readonly route = inject(ActivatedRoute);
+  private readonly auth = inject(AuthService);
+
 
   readonly loading$ = this.store.select(selectCoursesLoading);
 
@@ -119,11 +128,20 @@ export class CourseDetailsPage {
 
 
   constructor() {
-    // Ensure data is available for details page (MVP)
+    // Ensure data is available for details page (public)
     this.store.dispatch(loadCoursesRequested());
     this.store.dispatch(loadInstructorsRequested());
     this.store.dispatch(loadCategoriesRequested());
+
+    // Load progress only for logged-in users
+    // (progress selectors are keyed by `${userId}::${courseId}`)
+    this.auth.hydrateFromStorage().then(() => {
+      if (this.auth.currentUser()) {
+        this.store.dispatch(loadProgressRequested());
+      }
+    });
   }
+
 
   categoriesById = (id: string) => this.store.selectSignal(selectCategoryById(id))();
 }

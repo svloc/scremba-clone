@@ -4,19 +4,24 @@ import { AuthService } from '../../../core/auth/auth.service';
 import type { UserRole } from '../../../core/auth/auth.models';
 
 export function authGuard(allowedRoles: UserRole[] = ['student', 'admin']): CanActivateFn {
-  return () => {
+  return async () => {
     const auth = inject(AuthService);
     const router = inject(Router);
+
+    await auth.hydrateFromStorage();
 
     const role = auth.currentRole();
     const hasUser = !!auth.currentUser();
 
-    if (hasUser && role && allowedRoles.includes(role)) return true;
+    if (hasUser && role && allowedRoles.includes(role)) {
+      return true;
+    }
 
-    router.navigateByUrl('/');
+    await router.navigateByUrl('/');
     return false;
   };
 }
+
 
 
 

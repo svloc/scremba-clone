@@ -10,47 +10,64 @@ import { AuthService } from '../../../core/auth/auth.service';
   imports: [CommonModule, FormsModule, RouterLink],
   template: `
     <section class="auth-wrap">
-      <h1>Log in</h1>
-      <form (ngSubmit)="onSubmit()" #f="ngForm">
-        <label>
-          <span>Email</span>
-          <input name="email" type="email" required [(ngModel)]="email" />
-        </label>
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+          <h1 class="h4 mb-3">Log in</h1>
 
-        <label>
-          <span>Password</span>
-          <input name="password" type="password" required [(ngModel)]="password" />
-        </label>
+          <form (ngSubmit)="onSubmit()" #f="ngForm" class="d-flex flex-column gap-3">
+            <div class="mb-1">
+              <label class="form-label" for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="form-control"
+                required
+                [(ngModel)]="email" />
+            </div>
 
-        <label class="remember">
-          <input name="remember" type="checkbox" [(ngModel)]="rememberMe" />
-          <span>Remember me</span>
-        </label>
+            <div class="mb-1">
+              <label class="form-label" for="password">Password</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                class="form-control"
+                required
+                [(ngModel)]="password" />
+            </div>
 
-        <button type="submit" [disabled]="loading">{{ loading ? 'Signing in…' : 'Sign in' }}</button>
+            <div class="form-check mt-1">
+              <input
+                id="remember"
+                name="remember"
+                type="checkbox"
+                class="form-check-input"
+                [(ngModel)]="rememberMe" />
+              <label class="form-check-label" for="remember">Remember me</label>
+            </div>
 
-        <p class="error" *ngIf="error()">{{ error() }}</p>
+            <button type="submit" class="btn btn-primary w-100" [disabled]="loading">
+              {{ loading ? 'Signing in…' : 'Sign in' }}
+            </button>
 
-        <div class="links">
-          <a routerLink="/register">Create account</a>
-          <a routerLink="/forgot-password">Forgot password</a>
+            <p class="error mb-0" *ngIf="error()" aria-live="polite">{{ error() }}</p>
+
+            <div class="links d-flex justify-content-between mt-2 small">
+              <a class="link-secondary text-decoration-none" routerLink="/register">Create account</a>
+              <a class="link-secondary text-decoration-none" routerLink="/forgot-password">Forgot password</a>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </section>
   `,
   styles: [`
-    .auth-wrap{max-width:420px;margin:40px auto;padding:24px;border:1px solid rgba(0,0,0,.08);border-radius:12px}
-    h1{font-size:24px;margin-bottom:16px}
-    form{display:flex;flex-direction:column;gap:14px}
-    label{display:flex;flex-direction:column;gap:8px;font-size:14px}
-    input{padding:10px 12px;border-radius:10px;border:1px solid rgba(0,0,0,.15)}
-    button{padding:12px 14px;border-radius:12px;border:0;background:#e84c8a;color:white;font-weight:700;cursor:pointer}
-    button:disabled{opacity:.6;cursor:not-allowed}
-    .remember{flex-direction:row;align-items:center}
-    .remember span{margin-left:8px}
+    /* Kept minimal: align brand color and card outer margins with prior styling */
+    .auth-wrap{max-width:420px;margin:40px auto;}
+    button.btn{background:#e84c8a;color:white;font-weight:700;border-radius:12px;}
+    button.btn:disabled{opacity:.6;cursor:not-allowed}
     .error{color:#b00020;font-weight:600}
-    .links{display:flex;justify-content:space-between;font-size:13px;margin-top:10px}
-    .links a{color:#4a4e74;text-decoration:none}
   `]
 })
 export class LoginComponent {

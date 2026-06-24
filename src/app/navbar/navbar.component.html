@@ -1,12 +1,18 @@
 <nav class="nav">
-  <div class="app-container nav__inner">
-    <img src="../../assets/dark-logo.svg" class="nav__logo" />
+  <div class="app-container nav__inner d-flex align-items-center justify-content-between">
+    <img src="../../assets/dark-logo.svg" class="nav__logo" alt="Scrimba" />
 
-    <ul class="nav__menu">
-      <li class="browse-course nav__item"><a [routerLink]="['/courses']">Browse courses</a></li>
-      <li class="pricing nav__item"><a routerLink="/pricing">Pricing</a></li>
+    <ul class="nav__menu d-flex align-items-center gap-3 m-0">
+      <li class="browse-course nav__item d-none d-sm-inline">
+        <a [routerLink]="['/courses']">Browse courses</a>
+      </li>
+      <li class="pricing nav__item d-none d-sm-inline">
+        <a routerLink="/pricing">Pricing</a>
+      </li>
 
-      <li class="nav-btn nav__item"><a routerLink="/">Go Pro!</a></li>
+      <li class="nav-btn nav__item d-inline d-sm-none">
+        <a routerLink="/">Go Pro!</a>
+      </li>
 
       <li *ngIf="!currentUser()" class="nav__item"><a routerLink="/login">Log In</a></li>
 
@@ -22,6 +28,7 @@
     </ul>
   </div>
 </nav>
+
 
 
 

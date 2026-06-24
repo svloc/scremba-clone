@@ -3,13 +3,10 @@
   width: 100%;
   margin:0rem auto 2rem auto;
   position: relative;
-}
-
-/* Use shared container padding for alignment */
-.home-container{
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
 }
+
 
 
 .blob-1{

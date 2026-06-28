@@ -1,36 +1,37 @@
 <div class="container">
-<div class="mt-4 text-end d-flex align-items-end flex-column">
-    <div class="w-75 ">
-        <h3 class="fs-2">
-            Featured Path:<span>Frontend Developer</span>
-        </h3>
+    <div>
+        <div class="mt-4 text-end d-flex align-items-center">
+            <img class='w-25' src="/assets/home/s3.png" />
+            <div class="w-75 hero-content">
+                <img src="/assets/home/blob1.svg" class="hero-blob" alt="" aria-hidden="true">
 
-        <div class="position-relative d-inline-block heading-blob">
-            <h2 class="display-1 fw-semibold my-4 home-heading-shadow position-relative z-1 mb-0">
-                Don't waste $15K on a coding bootcamp
-            </h2>
+                <h3 class="fs-2">
+                    Featured Path:<span>Frontend Developer</span>
+                </h3>
+
+                <h2 class="display-1 fw-semibold my-4 home-heading-shadow">
+                    Don't waste $15K on a coding bootcamp
+                </h2>
+
+                <p class="fs-3 ms-3 mb-3 home-text-shadow">
+                    Our Frontend Career Path helps motivated students become hireable developers for 1% of the price
+                </p>
+
+                <a [routerLink]="['/courses']" class="btn btn-primary px-3 py-2 fs-4 fw-semibold btn-visit-path">
+                    Visit Path
+                </a>
+            </div>
+
+
         </div>
-
-        <p class="fs-3 ms-3 mb-3 home-text-shadow">
-            Our Frontend Career Path helps motivated students become hireable developers for 1% of the
-            price
-        </p>
-
-        <a
-            [routerLink]="['/courses']"
-            class="btn btn-primary d-inline-flex align-items-center justify-content-center px-3 py-2 fs-4 fw-semibold btn-visit-path">
-            Visit Path
-        </a>
+        <img class="w-100 img-fluid" src="/assets/peep-crowd.svg" alt="Peep crowd">
     </div>
+    <div class="my-3 w-100">
 
-    <img class="w-100 img-fluid" src="/assets/peep-crowd.svg" alt="Peep crowd">
-</div>
-    <div class="comment my-3 w-100">
-
-        <div class="comment-container d-flex flex-column py-5">
+        <div class="d-flex py-5">
             <div class="comment-item-1">
-                <img class="comment-boy-img ms-5 border border-5 border-white rounded"
-                    src="/assets/peep-man-bearded.svg" alt="Aldhair">
+                <img class="comment-boy-img ms-5 border border-5 border-white rounded" src="/assets/home/aldhair.svg"
+                    alt="Aldhair">
             </div>
             <div class="comment-item-2">
                 <h3 class="comment-heading fw-semibold m-4">
@@ -47,41 +48,45 @@
             </div>
         </div>
     </div>
-    <div class="section-1 container position-relative py-5 my-5">
-        <h2 class="section-heading text-center fs-1">
-            This is the Scrimba way
-        </h2>
-        <div class="section-1-line mx-auto"></div>
-        <div class="section-container d-flex flex-column justify-content-between position-relative">
-            <div class="section-item-1">
-                <h2 class="section-item-heading-primary text-center fw-bold mt-3 mb-0">
-                    1
-                </h2>
-                <h3 class="section-item-heading-secondary fw-normal fs-1 mb-2">
-                    Learn faster with interactive screencasts
-                </h3>
-                <p class="section-item-text-primary fs-5 lh-base mb-0">
-                    Our interactive screencasts let you edit the code whenever you want,
-                    just as if you were pair programming with the teacher. As a result,
-                    you will code more and learn faster.
-                </p>
-                <br>
-                <p class="section-item-text-secondary fs-5 lh-base mb-0">
-                    Give it a test drive
-                    <a href="#" class="text-decoration-none section-link">
-                        here
-                    </a>
-                </p>
-            </div>
-            <div class="section-item-2 mt-4">
-                <video class="section-img w-100 rounded" autoplay loop muted playsinline data-play="yep">
-                    <source src="/assets/static/videos/scrimba-demo.mp4" type="video/mp4">
-                </video>
-            </div>
+
+    <h2 class="section-heading text-center fs-1">
+        This is the Scrimba way
+    </h2>
+
+    <div class="row">
+        <div class="col-8">
+            <h2 class="section-item-heading-primary text-center fw-bold mt-3 mb-0">
+                1
+            </h2>
+            <h3 class="section-item-heading-secondary fw-normal fs-1 mb-2">
+                Learn faster with interactive screencasts
+            </h3>
+            <p class="section-item-text-primary fs-5 lh-base mb-0">
+                Our interactive screencasts let you edit the code whenever you want,
+                just as if you were pair programming with the teacher. As a result,
+                you will code more and learn faster.
+            </p>
+            <br>
+            <p class="section-item-text-secondary fs-5 lh-base mb-0">
+                Give it a test drive
+                <a href="#" class="text-decoration-none section-link">
+                    here
+                </a>
+            </p>
+        </div>
+
+        <div class="col-4">
+            <div class="card h-100"><img class="img-fluid" src="/assets/home/interactive_screencasts.png" /></div>
+
         </div>
     </div>
-    <div class="section-2 container position-relative py-5 my-5">
-        <div>
+
+    <div class="row">
+        <div class="col-4">
+            <div class="card h-100"><img class="img-fluid" src="/assets/home/support.png" /></div>
+
+        </div>
+        <div class="col-8">
             <h2 class="section-item-heading-primary text-center fw-bold mt-3 mb-0">
                 2
             </h2>
@@ -101,9 +106,11 @@
                 </a>
             </p>
         </div>
+
     </div>
-    <div class="section-3 container position-relative py-5 my-4">
-        <div>
+
+    <div class="row">
+        <div class="col-8">
             <h2 class="section-item-heading-primary text-center fw-bold mt-3 mb-0">
                 3
             </h2>
@@ -122,9 +129,17 @@
                 </a>
             </p>
         </div>
+        <div class="col-4">
+            <div class="card h-100"><img class="img-fluid" src="/assets/home/interactive_screencasts.png" /></div>
+
+        </div>
     </div>
-    <div class="section-4 container position-relative py-5 my-5">
-        <div>
+    <div class="row">
+        <div class="col-4">
+            <div class="card h-100"><img class="img-fluid" src="/assets/home/interactive_screencasts.png" /></div>
+
+        </div>
+        <div class="col-8">
             <h2 class="section-item-heading-primary text-center fw-bold mt-3 mb-0">
                 4
             </h2>
@@ -144,9 +159,10 @@
                 </a>
             </p>
         </div>
+
     </div>
-    <div class="section5 container py-5 my-5">
-        <div>
+    <div class="row">
+        <div class="col-8">
             <h2 class="section-item-heading-primary text-center fw-bold mt-3 mb-0">
                 5
             </h2>
@@ -162,5 +178,9 @@
                 <span class="fw-semibold">Kevin Powell</span>,
                 who have a combined following of over one million students.
             </p>
+        </div>
+        <div class="col-4">
+            <div class="card h-100"><img class="img-fluid" src="/assets/home/interactive_screencasts.png" /></div>
+
         </div>
     </div>

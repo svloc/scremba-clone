@@ -18,46 +18,24 @@
   background-color: #5035ff;
   border-color: #5035ff;
 }
-.heading-blob {
+.hero-content {
     position: relative;
-    display: inline-block;
+    overflow: hidden;      /* prevents horizontal scrollbar */
+    isolation: isolate;
 }
 
-.heading-blob h2 {
-    position: relative;
-    z-index: 1;
-}
-
-.heading-blob::before {
-    content: "";
+.hero-blob {
     position: absolute;
-    top: 90%;
+    top: 50%;
     left: 60%;
+
     transform: translate(-50%, -50%);
+    opacity: 0.5315;
+    width: min(65%, 450px);
+    height: auto;
 
-    width: clamp(200px, 65vw, 500px);
-    aspect-ratio: 1 / 1;
-
-    background: url("/assets/home/blob1.svg") center/contain no-repeat;
-    opacity: 0.3;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
-}
-
-.comment-container {
-  background-color: #FFEBCD;
-  clip-path: polygon(
-    49% 1%,
-    72% 1%,
-    100% 0,
-    100% 100%,
-    81% 99%,
-    53% 98%,
-    26% 99%,
-    0 100%,
-    0 0,
-    19% 1%
-  );
 }
 
 .comment-boy-img {

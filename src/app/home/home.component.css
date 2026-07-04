@@ -36,7 +36,44 @@
 
     z-index: -1;
     pointer-events: none;
+    transform-origin: 50% 16%;
 }
+.hero-content:hover .hero-blob{
+	-webkit-animation: kenburns-top-no-shift 5s ease-out both;
+	        animation: kenburns-top-no-shift 5s ease-out both;
+}
+
+@-webkit-keyframes kenburns-top-no-shift {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1.125);
+            transform: translate(-50%, -50%) scale(1.125);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+}
+
+@keyframes kenburns-top-no-shift {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1.125);
+            transform: translate(-50%, -50%) scale(1.125);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+}
+
+
 
 .comment-boy-img {
   width: 280px;
@@ -57,6 +94,35 @@
   justify-content: center;
 }
 
+.text-shadow-pop-top:hover .section-item-heading-primary {
+	-webkit-animation: text-shadow-pop-top 0.6s both;
+	        animation: text-shadow-pop-top 0.6s both;
+}
+@-webkit-keyframes text-shadow-pop-top {
+  0% {
+    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    text-shadow: 0 -1px #555555, 0 -2px #555555, 0 -3px #555555, 0 -4px #555555, 0 -5px #555555, 0 -6px #555555, 0 -7px #555555, 0 -8px #555555;
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+  }
+}
+@keyframes text-shadow-pop-top {
+  0% {
+    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    text-shadow: 0 -1px #555555, 0 -2px #555555, 0 -3px #555555, 0 -4px #555555, 0 -5px #555555, 0 -6px #555555, 0 -7px #555555, 0 -8px #555555;
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+  }
+}
+
 
 .section-1 {
     width: 90%;
@@ -73,7 +139,29 @@
     top: 25px;
 }
 
+.section-item-heading-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* small background behind the number */
+.section-item-heading-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(30%, 140px);
+    height: auto;
+    opacity: 0.95;
+    pointer-events: none;
+    z-index: 0;
+}
+
 .section-item-heading-primary {
+    position: relative;
+    z-index: 1;
+
     font-size: 3.5rem;
     color: #fff;
     -webkit-text-stroke: 1px #fff;
